@@ -65,3 +65,13 @@ The dashboard allows users to track financial activity, view insights, and analy
 This project focuses on frontend design, user experience, and basic data handling using mock data.
 
 No backend or database is used.
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](Dashboard.png)
+
+### Transactions
+![Transactions](Transactions.png)
+
+### Charts
+![Charts](Charts.png)
