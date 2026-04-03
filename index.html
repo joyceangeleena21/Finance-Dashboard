@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Finance Dashboard</h1>
+
+  <div class="right-controls">
+    <div class="role-selector">
+      <label>Role:</label>
+      <select id="role">
+        <option value="viewer">Viewer</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+
+    <button id="darkToggle">🌙</button>
+    <button id="exportBtn">Export</button>
+  </div>
+</header>
+<section id="cards">
+  <div class="card">Balance: ₹<span id="balance">0</span></div>
+  <div class="card">Income: ₹<span id="income">0</span></div>
+  <div class="card">Expenses: ₹<span id="expense">0</span></div>
+</section>
+
+<section>
+  <h2>Charts</h2>
+  <div class="chart-container">
+    <canvas id="lineChart"></canvas>
+    <canvas id="pieChart"></canvas>
+  </div>
+</section>
+
+<section>
+  <h2>Transactions</h2>
+
+  <div class="transaction-controls">
+    <input type="text" id="search" placeholder="Search category...">
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button id="addBtn" style="display:none;">Add Transaction</button>
+  </div>
+
+  <div id="addForm" class="add-form">
+    <input type="date" id="newDate">
+    <input type="number" id="newAmount" placeholder="Amount">
+    <input type="text" id="newCategory" placeholder="Category">
+    <select id="newType">
+      <option value="">Type</option>
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button id="submitBtn">Add</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</section>
+
+<section id="insights">
+  <h2>Insights</h2>
+  <p id="insightText">No data yet</p>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
