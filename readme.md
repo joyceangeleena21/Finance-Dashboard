@@ -73,5 +73,5 @@ No backend or database is used.
 ### Transactions
 ![Transactions](Transactions.png)
 
-### Charts
+### Insights
 ![Insights](Insights.png)
